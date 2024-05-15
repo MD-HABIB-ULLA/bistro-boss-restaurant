@@ -9,6 +9,7 @@ npm run dev
 
 ### Simple route tamplete
 
+``` javascript 
 import _ as React from "react";
 import _ as ReactDOM from "react-dom/client";
 import {
