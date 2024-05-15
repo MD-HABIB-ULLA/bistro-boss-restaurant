@@ -38,25 +38,35 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
+
 ### Add this in `tailwind.config.js`
 
-``` javascript
-
+```javascript
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [],
-}
-
+};
 ```
-### Add this in `index.css` 
-``` css
+
+### Add this in `index.css`
+
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- ```
+```
+
+# Daisy UI install
+
+```
+npm i -D daisyui@latest
+```
+
+### Add this in `tailwind.config.js`
+
+```javascript
+plugins: [require("daisyui")];
+```
