@@ -9,7 +9,7 @@ npm run dev
 
 ### Simple route tamplete
 
-``` javascript 
+```javascript
 import _ as React from "react";
 import _ as ReactDOM from "react-dom/client";
 import {
@@ -29,4 +29,28 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 <React.StrictMode>
 <RouterProvider router={router} />
 </React.StrictMode>
-);
+)
+```
+
+# Tialwind set up
+
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+### Add this in `tailwind.config.js`
+
+``` javascript
+
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
