@@ -32,7 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 )
 ```
 
-# Tialwind set up
+# Tailwind setup
 
 ```
 npm install -D tailwindcss postcss autoprefixer
@@ -54,3 +54,9 @@ export default {
 }
 
 ```
+### Add this in `index.css` 
+``` css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ ```
