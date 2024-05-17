@@ -70,3 +70,9 @@ npm i -D daisyui@latest
 ```javascript
 plugins: [require("daisyui")];
 ```
+
+# The technology I used
+
+- [Swiper](https://swiperjs.com/)
+- [React-icons](https://react-icons.github.io/react-icons/)
+- [React-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
