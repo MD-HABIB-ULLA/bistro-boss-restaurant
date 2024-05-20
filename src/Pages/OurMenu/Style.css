@@ -1,0 +1,36 @@
+.react-tabs__tab {
+    display: inline-block; /* Makes the tabs inline-block elements */
+    border: 1px solid transparent; /* Gives a transparent border */
+    border-bottom: none; /* Removes the bottom border */
+    position: relative; /* Positions the tab relatively */
+    bottom: -1px; /* Adjusts the tab position */
+    list-style: none; /* Removes default list styling */
+    padding: 6px 12px; /* Adds padding inside the tabs */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-weight: bold; /* Makes the font bold */
+    font-size: 20px; /* Sets the font size to 20px */
+    border-bottom: 4px solid transparent; /* Adds a transparent bottom border */
+}
+
+.react-tabs__tab--selected {
+    background: transparent; /* Ensures the background remains transparent */
+    outline: none; /* Removes any default outline */
+ /* Resets all borders */
+    border-bottom: 4px solid #BB8506; /* Adds a bottom border with the specified color */
+    color: #BB8506; /* Sets the text color */
+}
+
+
+.react-tabs__tab:focus {
+outline: none;
+
+
+}
+
+.react-tabs__tab-list {
+
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    border: none;
+}

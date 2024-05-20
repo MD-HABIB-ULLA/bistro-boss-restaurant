@@ -71,8 +71,41 @@ npm i -D daisyui@latest
 plugins: [require("daisyui")];
 ```
 
-# The technology I used
+# Firebase set up
+
+```
+npm install firebase
+```
+
+### Also
+
+add this in `firebase.config.js` file
+
+```javascript
+
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+const firebaseConfig = {
+  apiKey: "AIzaSyAANWlmacKUrlHLqpOmj65h-4caaoqHICc",
+  authDomain: "bistroboss-70669.firebaseapp.com",
+  projectId: "bistroboss-70669",
+  storageBucket: "bistroboss-70669.appspot.com",
+  messagingSenderId: "1008434256407",
+  appId: "1:1008434256407:web:70217ac8fbec34034b9a52",
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+export default auth;
+```
+
+# The technology / package I used
 
 - [Swiper](https://swiperjs.com/)
 - [React-icons](https://react-icons.github.io/react-icons/)
 - [React-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- [React-halmet](https://www.npmjs.com/package/react-helmet)
+- [React-hook-form](https://react-hook-form.com/)
+- [React-icons](https://www.npmjs.com/package/react-icons)
+- [React-simple-captcha](https://www.npmjs.com/package/react-simple-captcha)
+- [React-tabs](https://www.npmjs.com/package/react-tabs)

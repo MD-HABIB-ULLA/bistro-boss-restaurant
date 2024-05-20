@@ -1,7 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
+import { useContext } from "react";
+import { Authcontext } from "../../Provider/AuthProvider";
 
 const Navber = () => {
+  const { user, signOutUser } = useContext(Authcontext);
+  const handleSignout = () => {
+    signOutUser()
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
   const list = (
     <>
       <NavLink
@@ -90,7 +98,7 @@ const Navber = () => {
             </div>
             <ul className="menu menu-horizontal space-x-3">
               <NavLink
-                to="/shop"
+                to="/shop/salad"
                 className={({ isActive }) =>
                   `text-base font-bold flex items-center     uppercase ${
                     isActive ? "  text-yellow-400 inter" : "md:text-white"
@@ -104,9 +112,27 @@ const Navber = () => {
                   alt=""
                 />
               </NavLink>
-              <NavLink className="md:text-white text-base font-bold flex items-center gap-1    uppercase">
-                SIGN OUT <RxAvatar className="text-3xl  text-black  bg-white rounded-full"/>
-              </NavLink>
+              {user ? (
+                <>
+                  <button
+                    onClick={handleSignout}
+                    className="btn btn-ghost md:text-white text-base font-bold flex items-center gap-1    uppercase"
+                  >
+                    Log Out
+                  </button>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <NavLink
+                    to="login"
+                    className="md:text-white text-base font-bold flex items-center gap-1    uppercase"
+                  >
+                    Login{" "}
+                  </NavLink>
+                </>
+              )}
+              <RxAvatar className="text-3xl  text-black  bg-white rounded-full" />
             </ul>
           </div>
         </div>
