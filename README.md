@@ -10,8 +10,8 @@ npm run dev
 ### Simple route tamplete
 
 ```javascript
-import _ as React from "react";
-import _ as ReactDOM from "react-dom/client";
+import React from "react";
+import  ReactDOM from "react-dom/client";
 import {
 createBrowserRouter,
 RouterProvider,
